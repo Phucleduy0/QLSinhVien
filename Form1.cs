@@ -1,4 +1,11 @@
-﻿namespace QLSinhVien
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Data;
+using System.Threading.Tasks;
+namespace QLSinhVien
+
 {
     public partial class Form1 : Form
     {
@@ -28,45 +35,45 @@
            // GetAllSinhVien();
             DisplayDSSV(dsSinhVien);
         }
-        //private void btn_Save_Click(object sender, EventArgs e)
+        //private void btn_save_click(object sender, eventargs e)
         //{
-        //    SinhVien sv = GetSinhVien();
+        //    sinhvien sv = getsinhvien();
         //    if (sv == null)
         //    {
-        //        MessageBox.Show("Chưa nhập đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        messagebox.show("chưa nhập đủ thông tin", "thông báo", messageboxbuttons.ok, messageboxicon.error);
         //        return;
         //    }
         //    else
         //    {
-        //        if (sv.ID < 0)
+        //        if (sv.id < 0)
         //        {
-        //            string query = $"exec InsertStudent N'" + sv.HoTen + "', " + sv.MaLop + "";
-        //            if (SaveSinhVien(sv, query) == 1)
-        //                MessageBox.Show("Thêm sinh viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //            string query = $"exec insertstudent n'" + sv.hoten + "', " + sv.malop + "";
+        //            if (savesinhvien(sv, query) == 1)
+        //                messagebox.show("thêm sinh viên thành công!", "thông báo", messageboxbuttons.ok, messageboxicon.information);
         //        }
         //        else
         //        {
-        //            string query = $"update SinhVien set HoTen = N'" + sv.HoTen + "' where ID =" + sv.ID + "";
-        //            if (SaveSinhVien(sv, query) == 1)
-        //                MessageBox.Show("Thay đổi thông tin sinh viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //            string query = $"update sinhvien set hoten = n'" + sv.hoten + "' where id =" + sv.id + "";
+        //            if (savesinhvien(sv, query) == 1)
+        //                messagebox.show("thay đổi thông tin sinh viên thành công!", "thông báo", messageboxbuttons.ok, messageboxicon.information);
         //        }
-        //        btn_ReLoad.PerformClick();
+        //        btn_reload.performclick();
         //    }
         //}
-        //private int SaveSinhVien(SinhVien sv, string query)
+        //private int savesinhvien(sinhvien sv, string query)
         //{
-        //    string connectionString = @"Data Source=Asus\SQLEXPRESS;Initial Catalog=QLSinhVien;Integrated Security=True";
-        //    SqlConnection connection = new SqlConnection(connectionString);
+        //    string connectionstring = @"data source=asus\sqlexpress;initial catalog=qlsinhvien;integrated security=true";
+        //    sqlconnection connection = new sqlconnection(connectionstring);
 
-        //    SqlCommand command = connection.CreateCommand();
+        //    sqlcommand command = connection.createcommand();
 
-        //    command.CommandText = query;
+        //    command.commandtext = query;
 
-        //    connection.Open();
+        //    connection.open();
 
-        //    int data = command.ExecuteNonQuery();
+        //    int data = command.executenonquery();
 
-        //    connection.Close();
+        //    connection.close();
         //    return data;
         //}
 
@@ -102,12 +109,12 @@
         }
         //private void GetAllSinhVien()
         //{
-        //    dsSinhVien = new List<SinhVien>();
-        //    string query = @"select * from SinhVien";
-        //    DataTable data = getDataADO(query);
-        //    foreach (DataRow row in data.Rows)
+        //    dsSinhVien = new list<SinhVien>();
+        //    string query = @"select * from sinhvien";
+        //    datatable data = getdataado(query);
+        //    foreach (DataRow row in data.rows)
         //    {
-        //        dsSinhVien.Add(new SinhVien(row));
+        //        dsSinhVien.add(new SinhVien(row));
         //    }
         //}
         private void DisplayDSSV(List<SinhVien> list)
